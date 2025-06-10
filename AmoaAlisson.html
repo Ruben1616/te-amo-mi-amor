@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te Amo Alisson</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    .heart-shape {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      transform: rotate(-45deg);
+      background-color: #ff2d75;
+      box-shadow: 0 0 30px #ff2d75, 0 0 60px #ff2d75;
+      animation: pulse 1.5s infinite;
+    }
+
+    .heart-shape::before,
+    .heart-shape::after {
+      content: '';
+      width: 150px;
+      height: 150px;
+      background-color: #ff2d75;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0 0 30px #ff2d75, 0 0 60px #ff2d75;
+    }
+
+    .heart-shape::before {
+      top: -75px;
+      left: 0;
+    }
+
+    .heart-shape::after {
+      left: 75px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: rotate(-45deg) scale(1);
+      }
+      50% {
+        transform: rotate(-45deg) scale(1.1);
+      }
+      100% {
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+
+    .message {
+      color: #ff2d75;
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #ff2d75, 0 0 30px #ff2d75;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff2d75, 0 0 30px #ff2d75;
+      }
+      to {
+        text-shadow: 0 0 30px #ff2d75, 0 0 60px #ff2d75;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-shape"></div>
+  <div class="message">Te amo Alisson eres el amor de mi vida mi amor
+</div> 
+</body>
+</html>
+<div class="message"> att: Rubén
